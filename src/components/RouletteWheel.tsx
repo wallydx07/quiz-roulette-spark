@@ -30,8 +30,8 @@ export const RouletteWheel = ({ onTopicSelected }: RouletteWheelProps) => {
     setSpinning(true);
     setSelectedTopic(null);
     
-    // Random spins between 12-18 full rotations plus random angle
-    const baseRotations = 12 + Math.random() * 6;
+    // Random spins between 20-30 full rotations plus random angle
+    const baseRotations = 20 + Math.random() * 10;
     const randomAngle = Math.random() * 360;
     const totalRotation = baseRotations * 360 + randomAngle;
     
@@ -49,7 +49,7 @@ export const RouletteWheel = ({ onTopicSelected }: RouletteWheelProps) => {
       setTimeout(() => {
         onTopicSelected(topic);
       }, 1000);
-    }, 6000);
+    }, 8000);
   };
 
   return (
@@ -70,7 +70,7 @@ export const RouletteWheel = ({ onTopicSelected }: RouletteWheelProps) => {
         {/* Wheel */}
         <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl animate-pulse-glow">
           <div
-            className="w-full h-full transition-transform duration-[6000ms] ease-out"
+            className="w-full h-full transition-transform duration-[8000ms] ease-out"
             style={{
               transform: `rotate(${rotation}deg)`,
               transitionTimingFunction: spinning ? "cubic-bezier(0.17, 0.67, 0.12, 0.99)" : "ease-out",
