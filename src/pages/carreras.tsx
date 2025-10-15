@@ -5,6 +5,10 @@ import emprendedorismoHero from "@/assets/emprendedurismo-hero.jpg";
 import turismoHero from "@/assets/turismo-hero.jpg";
 import emprendedorismoIcon from "@/assets/emprendedurismo-icon.jpg";
 import turismoIcon from "@/assets/turismo-icon.jpg";
+import emergenciasHero from "@/assets/emergencias-hero.jpg";
+import emergenciasIcon from "@/assets/emergencias-icon.jpg";
+import derechosHumanosHero from "@/assets/derechos-humanos-hero.jpg";
+import derechosHumanosIcon from "@/assets/derechos-humanos-icon.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BookOpen, Clock, GraduationCap, Briefcase, Target, Users } from "lucide-react";
 
@@ -25,7 +29,7 @@ export default function Carreras() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Badge variant="secondary" className="text-lg px-6 py-2">
               <GraduationCap className="mr-2 h-5 w-5" />
-              2 Tecnicaturas Superiores
+              4 Tecnicaturas Superiores
             </Badge>
             <Badge variant="secondary" className="text-lg px-6 py-2">
               <Clock className="mr-2 h-5 w-5" />
@@ -38,12 +42,18 @@ export default function Carreras() {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         <Tabs defaultValue="emprendedurismo" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
-            <TabsTrigger value="emprendedurismo" className="text-base">
-              Emprendedurismo y Economía Comunitaria
+          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8">
+            <TabsTrigger value="emprendedurismo" className="text-sm lg:text-base">
+              Emprendedurismo
             </TabsTrigger>
-            <TabsTrigger value="turismo" className="text-base">
-              Guía de Turismo Comunitario
+            <TabsTrigger value="turismo" className="text-sm lg:text-base">
+              Turismo
+            </TabsTrigger>
+            <TabsTrigger value="emergencias" className="text-sm lg:text-base">
+              Emergencias
+            </TabsTrigger>
+            <TabsTrigger value="derechos" className="text-sm lg:text-base">
+              Derechos Humanos
             </TabsTrigger>
           </TabsList>
 
@@ -451,6 +461,329 @@ export default function Carreras() {
                         Siempre respetando los principios del Turismo Indígena de Base Comunitaria y los derechos
                         indígenas vigentes en el marco jurídico local, nacional e internacional.
                       </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          {/* Emergencias Tab */}
+          <TabsContent value="emergencias" className="space-y-8 animate-fade-in">
+            <Card className="overflow-hidden">
+              <div className="relative h-64 md:h-96">
+                <img
+                  src={emergenciasHero}
+                  alt="Gestión y Prevención de Emergencias"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                  <div className="p-6 text-white">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                      Tecnicatura Superior en Gestión y Prevención de Emergencias
+                    </h2>
+                    <p className="text-lg">Protegiendo vidas y comunidades</p>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-6 space-y-6">
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                    <img src={emergenciasIcon} alt="Icon" className="w-12 h-12 rounded" />
+                    <div>
+                      <h3 className="font-semibold mb-1">Título</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Técnico Superior en Gestión y Prevención de Emergencias
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                    <Clock className="w-12 h-12 text-primary" />
+                    <div>
+                      <h3 className="font-semibold mb-1">Duración</h3>
+                      <p className="text-sm text-muted-foreground">3 años - Modalidad Presencial</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                    <Briefcase className="w-12 h-12 text-primary" />
+                    <div>
+                      <h3 className="font-semibold mb-1">Familia Profesional</h3>
+                      <p className="text-sm text-muted-foreground">Seguridad, Ambiente e Higiene</p>
+                    </div>
+                  </div>
+                </div>
+
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="fundamentacion">
+                    <AccordionTrigger className="text-lg font-semibold">
+                      <BookOpen className="mr-2 h-5 w-5" />
+                      Fundamentación
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground space-y-4">
+                      <p>
+                        La Provincia de Jujuy enfrenta una notable carencia de profesionales capacitados en la gestión 
+                        y prevención de emergencias. Esta tecnicatura está diseñada para abordar esta brecha, formando 
+                        profesionales altamente capacitados que puedan asumir roles clave en la protección civil, 
+                        organismos de respuesta y en el sector privado.
+                      </p>
+                      <p>
+                        En un mundo donde desastres naturales, crisis sanitarias, accidentes industriales y otros eventos 
+                        imprevistos pueden ocurrir en cualquier momento, es crucial contar con personal capacitado. Esta 
+                        formación proporciona las habilidades necesarias para responder eficazmente ante situaciones de 
+                        crisis, minimizando daños y protegiendo vidas.
+                      </p>
+                      <p>
+                        La carrera es una respuesta necesaria ante los desafíos globales y locales que presenta el cambio 
+                        climático. La capacidad de las comunidades para responder eficazmente a emergencias climáticas se 
+                        vuelve cada vez más crítica.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="objetivos">
+                    <AccordionTrigger className="text-lg font-semibold">
+                      <Target className="mr-2 h-5 w-5" />
+                      Objetivos
+                    </AccordionTrigger>
+                    <AccordionContent className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold mb-2 text-foreground">Objetivo General</h4>
+                        <p className="text-muted-foreground">
+                          Formar técnicos profesionales multidisciplinarios capacitados para la planificación, prevención, 
+                          gestión y respuesta efectiva ante situaciones de emergencia, protegiendo vidas, minimizando 
+                          daños materiales y ambientales, promoviendo el bienestar y la seguridad de la comunidad.
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2 text-foreground">Objetivos Específicos</h4>
+                        <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                          <li>Capacitar en la identificación y evaluación de riesgos asociados a desastres y emergencias</li>
+                          <li>Desarrollar habilidades de planificación y gestión de estrategias de prevención y respuesta</li>
+                          <li>Promover la colaboración interinstitucional para optimizar recursos y mejorar respuestas</li>
+                          <li>Formar en técnicas de intervención, primeros auxilios, rescate y evacuación</li>
+                          <li>Inculcar principios éticos y legales en la gestión de emergencias</li>
+                          <li>Fomentar el conocimiento del territorio y adaptación estratégica</li>
+                          <li>Desarrollar competencias operativas para intervención en emergencias naturales y tecnológicas</li>
+                        </ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="perfil">
+                    <AccordionTrigger className="text-lg font-semibold">
+                      <Users className="mr-2 h-5 w-5" />
+                      Perfil del Egresado
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground space-y-4">
+                      <p>El egresado estará capacitado para:</p>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Identificar, evaluar y gestionar riesgos asociados a emergencias naturales y provocadas por el ser humano</li>
+                        <li>Analizar riesgos y medidas preventivas, planificar y ejecutar acciones de emergencia</li>
+                        <li>Llevar a cabo investigaciones en gestión de emergencias utilizando metodologías adecuadas</li>
+                        <li>Estar familiarizado con el territorio y recursos naturales para adaptar estrategias</li>
+                        <li>Intervenir en comunidades, liderando trabajo y promoviendo medidas de prevención</li>
+                        <li>Participar activamente en la gestión de emergencias con experiencia práctica</li>
+                        <li>Intervenir operativamente cumpliendo normas de seguridad en emergencias provocadas por riesgos diversos</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="campo">
+                    <AccordionTrigger className="text-lg font-semibold">
+                      <Briefcase className="mr-2 h-5 w-5" />
+                      Ámbito Socio Ocupacional
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground space-y-4">
+                      <div>
+                        <h4 className="font-semibold mb-2 text-foreground">Sector Público</h4>
+                        <ul className="list-disc list-inside space-y-2">
+                          <li>Ministerios y Secretarías de Seguridad y Emergencias (nacional, provincial, municipal)</li>
+                          <li>Defensa Civil - planificación y respuesta a desastres</li>
+                          <li>Agencias de Protección Civil</li>
+                          <li>Cuerpo de Bomberos</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2 text-foreground">Sector Privado</h4>
+                        <ul className="list-disc list-inside space-y-2">
+                          <li>Industria Petrolera y Minera - gestión de riesgos operacionales</li>
+                          <li>Empresas de Transporte y Logística</li>
+                          <li>Grandes complejos comerciales y eventos masivos</li>
+                        </ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          {/* Derechos Humanos Tab */}
+          <TabsContent value="derechos" className="space-y-8 animate-fade-in">
+            <Card className="overflow-hidden">
+              <div className="relative h-64 md:h-96">
+                <img
+                  src={derechosHumanosHero}
+                  alt="Derechos Humanos con Abordaje Integral e Inclusivo"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                  <div className="p-6 text-white">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                      Tecnicatura Superior en Derechos Humanos con Abordaje Integral e Inclusivo
+                    </h2>
+                    <p className="text-lg">Construyendo una sociedad más justa y equitativa</p>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-6 space-y-6">
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                    <img src={derechosHumanosIcon} alt="Icon" className="w-12 h-12 rounded" />
+                    <div>
+                      <h3 className="font-semibold mb-1">Título</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Técnico Superior en Derechos Humanos con Abordaje Integral e Inclusivo
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                    <Clock className="w-12 h-12 text-primary" />
+                    <div>
+                      <h3 className="font-semibold mb-1">Duración</h3>
+                      <p className="text-sm text-muted-foreground">3 años - Modalidad Presencial</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                    <Briefcase className="w-12 h-12 text-primary" />
+                    <div>
+                      <h3 className="font-semibold mb-1">Familia Profesional</h3>
+                      <p className="text-sm text-muted-foreground">Desarrollo Humano</p>
+                    </div>
+                  </div>
+                </div>
+
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="fundamentacion">
+                    <AccordionTrigger className="text-lg font-semibold">
+                      <BookOpen className="mr-2 h-5 w-5" />
+                      Fundamentación
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground space-y-4">
+                      <p>
+                        Esta tecnicatura surge como respuesta a la necesidad de formar profesionales especializados en 
+                        la defensa, promoción y protección de los derechos humanos desde un enfoque integral e inclusivo, 
+                        que considere las diversas realidades sociales, culturales y territoriales.
+                      </p>
+                      <p>
+                        El programa formativo pone énfasis en desarrollar capacidades para trabajar con comunidades 
+                        diversas, promoviendo la inclusión de las realidades locales y analizando situaciones de 
+                        vulneración de derechos, actuando proactivamente para lograr un desarrollo sostenible.
+                      </p>
+                      <p>
+                        Los derechos humanos son el eje central del desarrollo de las personas, promoviendo valores de 
+                        dignidad y respeto que sustentan el desarrollo humano integral.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="objetivos">
+                    <AccordionTrigger className="text-lg font-semibold">
+                      <Target className="mr-2 h-5 w-5" />
+                      Capacidades del Egresado
+                    </AccordionTrigger>
+                    <AccordionContent className="space-y-4">
+                      <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                        <li><strong>Conocimiento en Derechos Humanos:</strong> Comprender los principios fundamentales y marcos legales</li>
+                        <li><strong>Abordaje Integral e Inclusivo:</strong> Aplicar un enfoque interdisciplinario a la defensa y promoción</li>
+                        <li><strong>Capacidades de Análisis:</strong> Analizar contextos para identificar violaciones y restitución de garantías</li>
+                        <li><strong>Gestión y Coordinación:</strong> Gestionar programas y proyectos en organismos y empresas</li>
+                        <li><strong>Trabajo en Territorio:</strong> Realizar trabajo de campo respetando contextos culturales y sociales</li>
+                        <li><strong>Comunicación Efectiva:</strong> Comunicar y educar sobre temas de derechos humanos</li>
+                        <li><strong>Investigación:</strong> Documentar y analizar situaciones de violaciones</li>
+                        <li><strong>Valores y Actitudes:</strong> Fomentar actitudes que respeten y defiendan los derechos humanos</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="perfil">
+                    <AccordionTrigger className="text-lg font-semibold">
+                      <Users className="mr-2 h-5 w-5" />
+                      Perfil del Egresado
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground space-y-4">
+                      <p>El egresado estará preparado para:</p>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Realizar trabajo de campo en comunidades diversas, promoviendo la inclusión de realidades locales</li>
+                        <li>Analizar situaciones de vulneración de derechos humanos</li>
+                        <li>Actuar proactivamente para lograr un desarrollo sostenible</li>
+                        <li>Asesorar en políticas de responsabilidad social empresarial</li>
+                        <li>Desarrollar programas que impulsen cambios estructurales</li>
+                        <li>Identificar y abordar violaciones de Derechos Humanos</li>
+                        <li>Contribuir al desarrollo de entornos más justos y respetuosos</li>
+                        <li>Implementar políticas inclusivas y participativas</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="curriculum">
+                    <AccordionTrigger className="text-lg font-semibold">
+                      <BookOpen className="mr-2 h-5 w-5" />
+                      Estructura Curricular (Principales Espacios)
+                    </AccordionTrigger>
+                    <AccordionContent className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold mb-3 text-foreground">Primer Año</h4>
+                        <ul className="grid md:grid-cols-2 gap-2 text-sm text-muted-foreground">
+                          <li>• Antropología Social y Territorio</li>
+                          <li>• Introducción a los Derechos Humanos</li>
+                          <li>• Derecho Constitucional</li>
+                          <li>• Sistema de Protección Universal</li>
+                          <li>• Historia Argentina y Derechos Humanos</li>
+                          <li>• Metodología de la Investigación</li>
+                          <li>• Práctica Profesionalizante I</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-3 text-foreground">Segundo Año</h4>
+                        <ul className="grid md:grid-cols-2 gap-2 text-sm text-muted-foreground">
+                          <li>• Abordaje Integral de los DDHH</li>
+                          <li>• Estado, Ciudadanía y Garantía de Derechos</li>
+                          <li>• Legislación Aplicada</li>
+                          <li>• Derechos Sociales, Económicos y Culturales</li>
+                          <li>• Planificación y Elaboración de Proyecto Social</li>
+                          <li>• Comunicación y DDHH</li>
+                          <li>• Práctica Profesionalizante II</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-3 text-foreground">Tercer Año</h4>
+                        <ul className="grid md:grid-cols-2 gap-2 text-sm text-muted-foreground">
+                          <li>• Abordajes Integrales</li>
+                          <li>• Análisis y Diseño de Políticas Públicas para DDHH</li>
+                          <li>• DDHH e Inclusión</li>
+                          <li>• Empresas, DDHH y Responsabilidad Social</li>
+                          <li>• Gestión y Diseño de Proyecto Social</li>
+                          <li>• Práctica Profesionalizante III</li>
+                        </ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="campo">
+                    <AccordionTrigger className="text-lg font-semibold">
+                      <Briefcase className="mr-2 h-5 w-5" />
+                      Ámbito Socio Ocupacional
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground space-y-4">
+                      <p>Los egresados podrán desempeñarse en:</p>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li><strong>Organizaciones No Gubernamentales (ONG):</strong> Defensa y promoción de derechos</li>
+                        <li><strong>Empresas Privadas:</strong> Responsabilidad social y políticas inclusivas</li>
+                        <li><strong>Organismos Internacionales:</strong> Gestión de programas de DDHH</li>
+                        <li><strong>Trabajo Comunitario y Territorial:</strong> Intervención en comunidades diversas</li>
+                        <li><strong>Instituciones Públicas:</strong> Diseño e implementación de políticas públicas</li>
+                      </ul>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
