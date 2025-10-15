@@ -1,0 +1,16 @@
+npm run build
+docker build -t expoeducativa-frontend .
+docker save -o expoeducativa-frontend.tar expoeducativa-frontend
+
+
+# 1. Eliminar contenedores de docker-compose y órfanos
+docker-compose down --remove-orphans
+
+# 2. Eliminar cualquier contenedor detenido (no solo de docker-compose)
+docker container prune -f
+
+# 3. Cargar imágenes nuevas
+docker load -i expoeducativa-frontend.tar
+
+# 4. Levantar contenedores nuevos
+docker-compose up -d

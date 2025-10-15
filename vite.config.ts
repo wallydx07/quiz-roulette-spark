@@ -5,11 +5,20 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? "/" : "/", // ruta base (por si alojás en subcarpeta)
   server: {
     host: "::",
     port: 8080,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  build: {
+    outDir: "dist", // carpeta de salida
+    sourcemap: false, // desactiva mapas de fuente para producción
+    minify: "esbuild", // usa minificación rápida
+  },
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(), // solo en desarrollo
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
