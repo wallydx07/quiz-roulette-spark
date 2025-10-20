@@ -104,13 +104,53 @@ export default function Carreras() {
           {/* Emprendedurismo Tab */}
           <TabsContent value="emprendedurismo" className="space-y-8 animate-fade-in">
             <Card className="overflow-hidden shadow-elegant border-border/50 hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-72 md:h-[450px] group">
-                <img
-                  src={emprendedorismoHero}
-                  alt="Emprendedurismo y Economía Comunitaria"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
+              {/* Carrusel Hero */}
+              <div className="relative h-72 md:h-[450px]">
+                <Carousel className="w-full h-full">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={emprendedorismoHero}
+                          alt="Emprendedurismo y Economía Comunitaria"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={emprendedurismo1}
+                          alt="Estudiantes trabajando en equipo"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={emprendedurismo2}
+                          alt="Taller de capacitación"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={emprendedurismo3}
+                          alt="Feria de emprendimientos"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
+                
+                {/* Título sobrepuesto */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end pointer-events-none">
                   <div className="p-8 md:p-10 text-white">
                     <h2 className="text-3xl md:text-5xl font-display font-bold mb-3 leading-tight">
                       Tecnicatura Superior en Emprendedurismo y Economía Comunitaria
@@ -119,43 +159,8 @@ export default function Carreras() {
                   </div>
                 </div>
               </div>
+              
               <CardContent className="p-6 space-y-6">
-                {/* Carrusel de imágenes */}
-                <div className="mb-8">
-                  <Carousel className="w-full max-w-4xl mx-auto">
-                    <CarouselContent>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={emprendedurismo1}
-                            alt="Estudiantes trabajando en equipo"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={emprendedurismo2}
-                            alt="Taller de capacitación"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={emprendedurismo3}
-                            alt="Feria de emprendimientos"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
-                </div>
 
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
@@ -353,13 +358,53 @@ export default function Carreras() {
           {/* Turismo Tab */}
           <TabsContent value="turismo" className="space-y-8 animate-fade-in">
             <Card className="overflow-hidden shadow-elegant border-border/50 hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-72 md:h-[450px] group">
-                <img
-                  src={turismoHero}
-                  alt="Guía de Turismo Comunitario"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
+              {/* Carrusel Hero */}
+              <div className="relative h-72 md:h-[450px]">
+                <Carousel className="w-full h-full">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={turismoHero}
+                          alt="Guía de Turismo Comunitario"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={turismo1}
+                          alt="Turismo cultural"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={turismo2}
+                          alt="Ecoturismo"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={turismo3}
+                          alt="Hospitalidad turística"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
+                
+                {/* Título sobrepuesto */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end pointer-events-none">
                   <div className="p-8 md:p-10 text-white">
                     <h2 className="text-3xl md:text-5xl font-display font-bold mb-3 leading-tight">
                       Tecnicatura Superior en Guía de Turismo Comunitario
@@ -368,43 +413,8 @@ export default function Carreras() {
                   </div>
                 </div>
               </div>
+              
               <CardContent className="p-6 space-y-6">
-                {/* Carrusel de imágenes */}
-                <div className="mb-8">
-                  <Carousel className="w-full max-w-4xl mx-auto">
-                    <CarouselContent>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={turismo1}
-                            alt="Turismo cultural"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={turismo2}
-                            alt="Ecoturismo"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={turismo3}
-                            alt="Hospitalidad turística"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
-                </div>
 
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
@@ -589,13 +599,53 @@ export default function Carreras() {
           {/* Emergencias Tab */}
           <TabsContent value="emergencias" className="space-y-8 animate-fade-in">
             <Card className="overflow-hidden shadow-elegant border-border/50 hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-72 md:h-[450px] group">
-                <img
-                  src={emergenciasHero}
-                  alt="Gestión y Prevención de Emergencias"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
+              {/* Carrusel Hero */}
+              <div className="relative h-72 md:h-[450px]">
+                <Carousel className="w-full h-full">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={emergenciasHero}
+                          alt="Gestión y Prevención de Emergencias"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={emergencias1}
+                          alt="Equipo de primeros respondedores"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={emergencias2}
+                          alt="Capacitación en prevención"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={emergencias3}
+                          alt="Centro de comando"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
+                
+                {/* Título sobrepuesto */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end pointer-events-none">
                   <div className="p-8 md:p-10 text-white">
                     <h2 className="text-3xl md:text-5xl font-display font-bold mb-3 leading-tight">
                       Tecnicatura Superior en Gestión y Prevención de Emergencias
@@ -604,43 +654,8 @@ export default function Carreras() {
                   </div>
                 </div>
               </div>
+              
               <CardContent className="p-6 space-y-6">
-                {/* Carrusel de imágenes */}
-                <div className="mb-8">
-                  <Carousel className="w-full max-w-4xl mx-auto">
-                    <CarouselContent>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={emergencias1}
-                            alt="Equipo de primeros respondedores"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={emergencias2}
-                            alt="Capacitación en prevención"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={emergencias3}
-                            alt="Centro de comando"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
-                </div>
 
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
@@ -776,13 +791,53 @@ export default function Carreras() {
           {/* Derechos Humanos Tab */}
           <TabsContent value="derechos" className="space-y-8 animate-fade-in">
             <Card className="overflow-hidden shadow-elegant border-border/50 hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-72 md:h-[450px] group">
-                <img
-                  src={derechosHumanosHero}
-                  alt="Derechos Humanos con Abordaje Integral e Inclusivo"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
+              {/* Carrusel Hero */}
+              <div className="relative h-72 md:h-[450px]">
+                <Carousel className="w-full h-full">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={derechosHumanosHero}
+                          alt="Derechos Humanos con Abordaje Integral e Inclusivo"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={derechosHumanos1}
+                          alt="Asamblea comunitaria"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={derechosHumanos2}
+                          alt="Taller educativo"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-72 md:h-[450px]">
+                        <img
+                          src={derechosHumanos3}
+                          alt="Estudiantes en biblioteca"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
+                
+                {/* Título sobrepuesto */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end pointer-events-none">
                   <div className="p-8 md:p-10 text-white">
                     <h2 className="text-3xl md:text-5xl font-display font-bold mb-3 leading-tight">
                       Tecnicatura Superior en Derechos Humanos con Abordaje Integral e Inclusivo
@@ -791,43 +846,8 @@ export default function Carreras() {
                   </div>
                 </div>
               </div>
+              
               <CardContent className="p-6 space-y-6">
-                {/* Carrusel de imágenes */}
-                <div className="mb-8">
-                  <Carousel className="w-full max-w-4xl mx-auto">
-                    <CarouselContent>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={derechosHumanos1}
-                            alt="Asamblea comunitaria"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={derechosHumanos2}
-                            alt="Taller educativo"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                          <img
-                            src={derechosHumanos3}
-                            alt="Estudiantes en biblioteca"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
-                </div>
 
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
