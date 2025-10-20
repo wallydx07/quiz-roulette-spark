@@ -11,6 +11,27 @@ import derechosHumanosHero from "@/assets/derechos-humanos-hero.jpg";
 import derechosHumanosIcon from "@/assets/derechos-humanos-icon.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BookOpen, Clock, GraduationCap, Briefcase, Target, Users } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
+// Emprendedurismo images
+import emprendedurismo1 from "@/assets/emprendedurismo/imagen-1.jpg";
+import emprendedurismo2 from "@/assets/emprendedurismo/imagen-2.jpg";
+import emprendedurismo3 from "@/assets/emprendedurismo/imagen-3.jpg";
+
+// Turismo images
+import turismo1 from "@/assets/turismo/imagen-1.jpg";
+import turismo2 from "@/assets/turismo/imagen-2.jpg";
+import turismo3 from "@/assets/turismo/imagen-3.jpg";
+
+// Emergencias images
+import emergencias1 from "@/assets/emergencias/imagen-1.jpg";
+import emergencias2 from "@/assets/emergencias/imagen-2.jpg";
+import emergencias3 from "@/assets/emergencias/imagen-3.jpg";
+
+// Derechos Humanos images
+import derechosHumanos1 from "@/assets/derechos-humanos/imagen-1.jpg";
+import derechosHumanos2 from "@/assets/derechos-humanos/imagen-2.jpg";
+import derechosHumanos3 from "@/assets/derechos-humanos/imagen-3.jpg";
 
 export default function Carreras() {
   return (
@@ -90,6 +111,43 @@ export default function Carreras() {
                 </div>
               </div>
               <CardContent className="p-6 space-y-6">
+                {/* Carrusel de imágenes */}
+                <div className="mb-8">
+                  <Carousel className="w-full max-w-4xl mx-auto">
+                    <CarouselContent>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={emprendedurismo1}
+                            alt="Estudiantes trabajando en equipo"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={emprendedurismo2}
+                            alt="Taller de capacitación"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={emprendedurismo3}
+                            alt="Feria de emprendimientos"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
+                </div>
+
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
                     <img src={emprendedorismoIcon} alt="Icon" className="w-12 h-12 rounded" />
@@ -302,6 +360,43 @@ export default function Carreras() {
                 </div>
               </div>
               <CardContent className="p-6 space-y-6">
+                {/* Carrusel de imágenes */}
+                <div className="mb-8">
+                  <Carousel className="w-full max-w-4xl mx-auto">
+                    <CarouselContent>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={turismo1}
+                            alt="Turismo cultural"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={turismo2}
+                            alt="Ecoturismo"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={turismo3}
+                            alt="Hospitalidad turística"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
+                </div>
+
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
                     <img src={turismoIcon} alt="Icon" className="w-12 h-12 rounded" />
@@ -501,6 +596,43 @@ export default function Carreras() {
                 </div>
               </div>
               <CardContent className="p-6 space-y-6">
+                {/* Carrusel de imágenes */}
+                <div className="mb-8">
+                  <Carousel className="w-full max-w-4xl mx-auto">
+                    <CarouselContent>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={emergencias1}
+                            alt="Equipo de primeros respondedores"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={emergencias2}
+                            alt="Capacitación en prevención"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={emergencias3}
+                            alt="Centro de comando"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
+                </div>
+
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
                     <img src={emergenciasIcon} alt="Icon" className="w-12 h-12 rounded" />
@@ -651,6 +783,43 @@ export default function Carreras() {
                 </div>
               </div>
               <CardContent className="p-6 space-y-6">
+                {/* Carrusel de imágenes */}
+                <div className="mb-8">
+                  <Carousel className="w-full max-w-4xl mx-auto">
+                    <CarouselContent>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={derechosHumanos1}
+                            alt="Asamblea comunitaria"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={derechosHumanos2}
+                            alt="Taller educativo"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                          <img
+                            src={derechosHumanos3}
+                            alt="Estudiantes en biblioteca"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
+                </div>
+
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
                     <img src={derechosHumanosIcon} alt="Icon" className="w-12 h-12 rounded" />
