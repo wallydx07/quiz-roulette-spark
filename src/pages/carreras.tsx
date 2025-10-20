@@ -16,28 +16,42 @@ export default function Carreras() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
       {/* Hero Section */}
+
+
+
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 z-10" />
-        <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-20" />
+        {/* Fondo sólido azul fuerte */}
+        <div className="absolute inset-0 bg-[#30475e] z-10" />
+
+        {/* Imagen de fondo con baja opacidad */}
+        <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10" />
+
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in drop-shadow-lg">
             Exposición Virtual de Carreras
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
+          <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow">
             Instituto de Educación Superior Intercultural "Campinta Guazú Gloria Pérez"
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Badge variant="secondary" className="text-lg px-6 py-2">
+            <Badge
+                variant="secondary"
+                className="text-lg px-6 py-2 bg-white/20 backdrop-blur-sm text-[#30475e] border border-white/40"
+            >
               <GraduationCap className="mr-2 h-5 w-5" />
               4 Tecnicaturas Superiores
             </Badge>
-            <Badge variant="secondary" className="text-lg px-6 py-2">
+            <Badge
+                variant="secondary"
+                className="text-lg px-6 py-2 bg-white/20 backdrop-blur-sm text-[#30475e] border border-white/40"
+            >
               <Clock className="mr-2 h-5 w-5" />
               3 Años de duración
             </Badge>
           </div>
         </div>
       </section>
+
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12 max-w-7xl">
