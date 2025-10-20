@@ -35,78 +35,87 @@ import derechosHumanos3 from "@/assets/derechos-humanos/imagen-3.jpg";
 
 export default function Carreras() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
       {/* Hero Section */}
+      <section className="relative h-[65vh] flex items-center justify-center overflow-hidden">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-secondary z-10" />
+        
+        {/* Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10 z-10" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }} />
 
-
-
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        {/* Fondo sólido azul fuerte */}
-        <div className="absolute inset-0 bg-[#30475e] z-10" />
-
-        {/* Imagen de fondo con baja opacidad */}
-        <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10" />
-
-        <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in drop-shadow-lg">
+        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
+          <h1 className="text-4xl md:text-7xl font-display font-bold text-white mb-6 animate-fade-in-up drop-shadow-2xl tracking-tight">
             Exposición Virtual de Carreras
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow">
+          <p className="text-xl md:text-2xl text-white/95 mb-10 drop-shadow-lg font-medium animate-fade-in max-w-3xl mx-auto">
             Instituto de Educación Superior Intercultural "Campinta Guazú Gloria Pérez"
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Badge
-                variant="secondary"
-                className="text-lg px-6 py-2 bg-white/20 backdrop-blur-sm text-[#30475e] border border-white/40"
-            >
+          <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up">
+            <Badge className="text-base md:text-lg px-6 py-3 bg-white/20 backdrop-blur-md text-white border-2 border-white/30 hover:bg-white/30 transition-all duration-300 shadow-lg hover:scale-105">
               <GraduationCap className="mr-2 h-5 w-5" />
               4 Tecnicaturas Superiores
             </Badge>
-            <Badge
-                variant="secondary"
-                className="text-lg px-6 py-2 bg-white/20 backdrop-blur-sm text-[#30475e] border border-white/40"
-            >
+            <Badge className="text-base md:text-lg px-6 py-3 bg-white/20 backdrop-blur-md text-white border-2 border-white/30 hover:bg-white/30 transition-all duration-300 shadow-lg hover:scale-105">
               <Clock className="mr-2 h-5 w-5" />
               3 Años de duración
             </Badge>
           </div>
         </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background/50 to-transparent z-10" />
       </section>
 
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12 max-w-7xl">
+      <div className="container mx-auto px-4 py-16 max-w-7xl">
         <Tabs defaultValue="emprendedurismo" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8">
-            <TabsTrigger value="emprendedurismo" className="text-sm lg:text-base">
+          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-12 p-2 bg-card shadow-lg rounded-xl border border-border/50">
+            <TabsTrigger 
+              value="emprendedurismo" 
+              className="text-sm lg:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all duration-300 rounded-lg"
+            >
               Emprendedurismo
             </TabsTrigger>
-            <TabsTrigger value="turismo" className="text-sm lg:text-base">
+            <TabsTrigger 
+              value="turismo" 
+              className="text-sm lg:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all duration-300 rounded-lg"
+            >
               Turismo
             </TabsTrigger>
-            <TabsTrigger value="emergencias" className="text-sm lg:text-base">
+            <TabsTrigger 
+              value="emergencias" 
+              className="text-sm lg:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all duration-300 rounded-lg"
+            >
               Emergencias
             </TabsTrigger>
-            <TabsTrigger value="derechos" className="text-sm lg:text-base">
+            <TabsTrigger 
+              value="derechos" 
+              className="text-sm lg:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all duration-300 rounded-lg"
+            >
               Derechos Humanos
             </TabsTrigger>
           </TabsList>
 
           {/* Emprendedurismo Tab */}
           <TabsContent value="emprendedurismo" className="space-y-8 animate-fade-in">
-            <Card className="overflow-hidden">
-              <div className="relative h-64 md:h-96">
+            <Card className="overflow-hidden shadow-elegant border-border/50 hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-72 md:h-[450px] group">
                 <img
                   src={emprendedorismoHero}
                   alt="Emprendedurismo y Economía Comunitaria"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-6 text-white">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
+                  <div className="p-8 md:p-10 text-white">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-3 leading-tight">
                       Tecnicatura Superior en Emprendedurismo y Economía Comunitaria
                     </h2>
-                    <p className="text-lg">Formando líderes empresariales comunitarios</p>
+                    <p className="text-lg md:text-xl text-white/95 font-medium">Formando líderes empresariales comunitarios</p>
                   </div>
                 </div>
               </div>
@@ -148,27 +157,27 @@ export default function Carreras() {
                   </Carousel>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <img src={emprendedorismoIcon} alt="Icon" className="w-12 h-12 rounded" />
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
+                    <img src={emprendedorismoIcon} alt="Icon" className="w-14 h-14 rounded-lg shadow-sm" />
                     <div>
-                      <h3 className="font-semibold mb-1">Título</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="font-display font-semibold mb-1 text-base">Título</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         Técnico Superior en Emprendedurismo y Economía Comunitaria
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <Clock className="w-12 h-12 text-primary" />
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-xl border border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-md">
+                    <Clock className="w-14 h-14 text-secondary flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Duración</h3>
+                      <h3 className="font-display font-semibold mb-1 text-base">Duración</h3>
                       <p className="text-sm text-muted-foreground">3 años - Modalidad Presencial</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <Briefcase className="w-12 h-12 text-primary" />
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-accent/5 to-accent/10 rounded-xl border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-md">
+                    <Briefcase className="w-14 h-14 text-accent flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Familia Profesional</h3>
+                      <h3 className="font-display font-semibold mb-1 text-base">Familia Profesional</h3>
                       <p className="text-sm text-muted-foreground">Administración</p>
                     </div>
                   </div>
@@ -343,19 +352,19 @@ export default function Carreras() {
 
           {/* Turismo Tab */}
           <TabsContent value="turismo" className="space-y-8 animate-fade-in">
-            <Card className="overflow-hidden">
-              <div className="relative h-64 md:h-96">
+            <Card className="overflow-hidden shadow-elegant border-border/50 hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-72 md:h-[450px] group">
                 <img
                   src={turismoHero}
                   alt="Guía de Turismo Comunitario"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-6 text-white">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
+                  <div className="p-8 md:p-10 text-white">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-3 leading-tight">
                       Tecnicatura Superior en Guía de Turismo Comunitario
                     </h2>
-                    <p className="text-lg">Preservando y compartiendo nuestro patrimonio cultural</p>
+                    <p className="text-lg md:text-xl text-white/95 font-medium">Preservando y compartiendo nuestro patrimonio cultural</p>
                   </div>
                 </div>
               </div>
@@ -397,27 +406,27 @@ export default function Carreras() {
                   </Carousel>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <img src={turismoIcon} alt="Icon" className="w-12 h-12 rounded" />
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
+                    <img src={turismoIcon} alt="Icon" className="w-14 h-14 rounded-lg shadow-sm" />
                     <div>
-                      <h3 className="font-semibold mb-1">Título</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="font-display font-semibold mb-1 text-base">Título</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         Técnico Superior Guía de Turismo Comunitario
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <Clock className="w-12 h-12 text-primary" />
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-xl border border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-md">
+                    <Clock className="w-14 h-14 text-secondary flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Duración</h3>
+                      <h3 className="font-display font-semibold mb-1 text-base">Duración</h3>
                       <p className="text-sm text-muted-foreground">3 años - Modalidad Presencial</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <Briefcase className="w-12 h-12 text-primary" />
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-accent/5 to-accent/10 rounded-xl border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-md">
+                    <Briefcase className="w-14 h-14 text-accent flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Familia Profesional</h3>
+                      <h3 className="font-display font-semibold mb-1 text-base">Familia Profesional</h3>
                       <p className="text-sm text-muted-foreground">Turismo</p>
                     </div>
                   </div>
@@ -579,19 +588,19 @@ export default function Carreras() {
 
           {/* Emergencias Tab */}
           <TabsContent value="emergencias" className="space-y-8 animate-fade-in">
-            <Card className="overflow-hidden">
-              <div className="relative h-64 md:h-96">
+            <Card className="overflow-hidden shadow-elegant border-border/50 hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-72 md:h-[450px] group">
                 <img
                   src={emergenciasHero}
                   alt="Gestión y Prevención de Emergencias"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-6 text-white">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
+                  <div className="p-8 md:p-10 text-white">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-3 leading-tight">
                       Tecnicatura Superior en Gestión y Prevención de Emergencias
                     </h2>
-                    <p className="text-lg">Protegiendo vidas y comunidades</p>
+                    <p className="text-lg md:text-xl text-white/95 font-medium">Protegiendo vidas y comunidades</p>
                   </div>
                 </div>
               </div>
@@ -633,27 +642,27 @@ export default function Carreras() {
                   </Carousel>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <img src={emergenciasIcon} alt="Icon" className="w-12 h-12 rounded" />
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
+                    <img src={emergenciasIcon} alt="Icon" className="w-14 h-14 rounded-lg shadow-sm" />
                     <div>
-                      <h3 className="font-semibold mb-1">Título</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="font-display font-semibold mb-1 text-base">Título</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         Técnico Superior en Gestión y Prevención de Emergencias
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <Clock className="w-12 h-12 text-primary" />
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-xl border border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-md">
+                    <Clock className="w-14 h-14 text-secondary flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Duración</h3>
+                      <h3 className="font-display font-semibold mb-1 text-base">Duración</h3>
                       <p className="text-sm text-muted-foreground">3 años - Modalidad Presencial</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <Briefcase className="w-12 h-12 text-primary" />
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-accent/5 to-accent/10 rounded-xl border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-md">
+                    <Briefcase className="w-14 h-14 text-accent flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Familia Profesional</h3>
+                      <h3 className="font-display font-semibold mb-1 text-base">Familia Profesional</h3>
                       <p className="text-sm text-muted-foreground">Seguridad, Ambiente e Higiene</p>
                     </div>
                   </div>
@@ -766,19 +775,19 @@ export default function Carreras() {
 
           {/* Derechos Humanos Tab */}
           <TabsContent value="derechos" className="space-y-8 animate-fade-in">
-            <Card className="overflow-hidden">
-              <div className="relative h-64 md:h-96">
+            <Card className="overflow-hidden shadow-elegant border-border/50 hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-72 md:h-[450px] group">
                 <img
                   src={derechosHumanosHero}
                   alt="Derechos Humanos con Abordaje Integral e Inclusivo"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-6 text-white">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
+                  <div className="p-8 md:p-10 text-white">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-3 leading-tight">
                       Tecnicatura Superior en Derechos Humanos con Abordaje Integral e Inclusivo
                     </h2>
-                    <p className="text-lg">Construyendo una sociedad más justa y equitativa</p>
+                    <p className="text-lg md:text-xl text-white/95 font-medium">Construyendo una sociedad más justa y equitativa</p>
                   </div>
                 </div>
               </div>
@@ -820,27 +829,27 @@ export default function Carreras() {
                   </Carousel>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <img src={derechosHumanosIcon} alt="Icon" className="w-12 h-12 rounded" />
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
+                    <img src={derechosHumanosIcon} alt="Icon" className="w-14 h-14 rounded-lg shadow-sm" />
                     <div>
-                      <h3 className="font-semibold mb-1">Título</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="font-display font-semibold mb-1 text-base">Título</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         Técnico Superior en Derechos Humanos con Abordaje Integral e Inclusivo
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <Clock className="w-12 h-12 text-primary" />
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-xl border border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-md">
+                    <Clock className="w-14 h-14 text-secondary flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Duración</h3>
+                      <h3 className="font-display font-semibold mb-1 text-base">Duración</h3>
                       <p className="text-sm text-muted-foreground">3 años - Modalidad Presencial</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                    <Briefcase className="w-12 h-12 text-primary" />
+                  <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-accent/5 to-accent/10 rounded-xl border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-md">
+                    <Briefcase className="w-14 h-14 text-accent flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Familia Profesional</h3>
+                      <h3 className="font-display font-semibold mb-1 text-base">Familia Profesional</h3>
                       <p className="text-sm text-muted-foreground">Desarrollo Humano</p>
                     </div>
                   </div>
